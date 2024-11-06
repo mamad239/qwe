@@ -1,0 +1,2150 @@
+{
+    "basePath": "/",
+    "components": {
+        "securitySchemes": {
+            "BearerAuth": {
+                "bearerFormat": "UUID",
+                "scheme": "bearer",
+                "type": "http"
+            }
+        }
+    },
+    "editing": true,
+    "id": "6b9fbf825f4f61c5174bd25584b35413",
+    "info": {
+        "contact": {
+            "email": "frikky@shuffler.io",
+            "name": "@frikkylikeme",
+            "url": "https://twitter.com/frikkylikeme"
+        },
+        "description": "Based on docs from https://github.com/openstack-archive/networking-fortinet/blob/5ca7b1b4c17240c8eb1b60f7cfa9a46b5b943718/networking_fortinet/api_client/templates.py\n\nAuthentication: login with HTTP -> Cookie",
+        "title": "FortiGate Firewall",
+        "version": "1.0",
+        "x-categories": [
+            "Network"
+        ],
+        "x-logo": "data:image/png;base64,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"
+    },
+    "openapi": "3.0.0",
+    "paths": {
+        "/api/v2/cmdb/firewall.service/custom": {
+            "post": {
+                "operationId": "Add_firewall_service",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"custom\",\n        \"json\": {\n            {% if protocol is defined %}\n                \"protocol\": \"{{ protocol }}\",\n            {% else %}\n                \"protocol\": \"TCP/UDP/SCTP\",\n            {% endif %}\n            {% if fqdn is defined %}\n                \"fqdn\": \"{{ fqdn }}\",\n            {% endif %}\n            {% if iprange is defined %}\n                \"iprange\": \"{{ iprange }}\",\n            {% endif %}\n            {% if tcp_portrange is defined %}\n                \"tcp-portrange\": \"{{ tcp_portrange }}\",\n            {% endif %}\n            {% if udp_portrange is defined %}\n                \"udp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if sctp_portrange is defined %}\n                \"sctp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"name\": \"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"custom\",\n        \"json\": {\n            {% if protocol is defined %}\n                \"protocol\": \"{{ protocol }}\",\n            {% else %}\n                \"protocol\": \"TCP/UDP/SCTP\",\n            {% endif %}\n            {% if fqdn is defined %}\n                \"fqdn\": \"{{ fqdn }}\",\n            {% endif %}\n            {% if iprange is defined %}\n                \"iprange\": \"{{ iprange }}\",\n            {% endif %}\n            {% if tcp_portrange is defined %}\n                \"tcp-portrange\": \"{{ tcp_portrange }}\",\n            {% endif %}\n            {% if udp_portrange is defined %}\n                \"udp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if sctp_portrange is defined %}\n                \"sctp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"name\": \"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall service"
+            }
+        },
+        "/api/v2/cmdb/firewall.service/custom/{name}": {
+            "delete": {
+                "operationId": "Delete_firewall_service",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall service"
+            },
+            "get": {
+                "operationId": "Get_firewall_service",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall service"
+            },
+            "put": {
+                "operationId": "Set_firewall_service",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"custom\",\n        \"json\": {\n            {% if protocol is defined %}\n                \"protocol\": \"{{ protocol }}\",\n            {% else %}\n                \"protocol\": \"TCP/UDP/SCTP\",\n            {% endif %}\n            {% if fqdn is defined %}\n                \"fqdn\": \"{{ fqdn }}\",\n            {% endif %}\n            {% if iprange is defined %}\n                \"iprange\": \"{{ iprange }}\",\n            {% endif %}\n            {% if tcp_portrange is defined %}\n                \"tcp-portrange\": \"{{ tcp_portrange }}\",\n            {% endif %}\n            {% if udp_portrange is defined %}\n                \"udp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if sctp_portrange is defined %}\n                \"sctp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"name\": \"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"custom\",\n        \"json\": {\n            {% if protocol is defined %}\n                \"protocol\": \"{{ protocol }}\",\n            {% else %}\n                \"protocol\": \"TCP/UDP/SCTP\",\n            {% endif %}\n            {% if fqdn is defined %}\n                \"fqdn\": \"{{ fqdn }}\",\n            {% endif %}\n            {% if iprange is defined %}\n                \"iprange\": \"{{ iprange }}\",\n            {% endif %}\n            {% if tcp_portrange is defined %}\n                \"tcp-portrange\": \"{{ tcp_portrange }}\",\n            {% endif %}\n            {% if udp_portrange is defined %}\n                \"udp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if sctp_portrange is defined %}\n                \"sctp-portrange\": \"{{ udp_portrange }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"name\": \"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set firewall service"
+            }
+        },
+        "/api/v2/cmdb/firewall/address": {
+            "post": {
+                "operationId": "Add_firewall_address",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"address\",\n        \"json\": {\n            {% if associated_interface is defined %}\n                \"associated-interface\": \"{{ associated_interface }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"subnet\": \"{{ subnet }}\",\n            \"name\": \"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"address\",\n        \"json\": {\n            {% if associated_interface is defined %}\n                \"associated-interface\": \"{{ associated_interface }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"subnet\": \"{{ subnet }}\",\n            \"name\": \"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall address"
+            }
+        },
+        "/api/v2/cmdb/firewall/address/{name}": {
+            "delete": {
+                "operationId": "Delete_firewall_address",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall address"
+            },
+            "get": {
+                "operationId": "Get_firewall_address",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall address"
+            },
+            "put": {
+                "operationId": "Set_firewall_address",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"address\",\n        \"json\": {\n            {% if associated_interface is defined %}\n                \"associated-interface\": \"{{ associated_interface }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"subnet\": \"{{ subnet }}\",\n            \"name\": \"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"address\",\n        \"json\": {\n            {% if associated_interface is defined %}\n                \"associated-interface\": \"{{ associated_interface }}\",\n            {% endif %}\n            {% if comment is defined %}\n                \"comment\": \"{{ comment }}\",\n            {% endif %}\n            \"subnet\": \"{{ subnet }}\",\n            \"name\": \"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set firewall address"
+            }
+        },
+        "/api/v2/cmdb/firewall/addrgrp": {
+            "post": {
+                "operationId": "Add_firewall_address_group",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"addrgrp\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"member\": [\n            {% for member in members[:-1] %}\n                {\n                    \"name\": \"{{ member }}\"\n                },\n            {% endfor %}\n                {\n                    \"name\": \"{{ members[-1] }}\"\n                }\n            ]\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"addrgrp\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"member\": [\n            {% for member in members[:-1] %}\n                {\n                    \"name\": \"{{ member }}\"\n                },\n            {% endfor %}\n                {\n                    \"name\": \"{{ members[-1] }}\"\n                }\n            ]\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall address group"
+            }
+        },
+        "/api/v2/cmdb/firewall/addrgrp/{name}": {
+            "delete": {
+                "operationId": "Delete_firewall_address_group",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall address group"
+            },
+            "get": {
+                "operationId": "Get_firewall_address_group",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall address group"
+            },
+            "put": {
+                "operationId": "Set_firewall_address_group",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"addrgrp\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"member\": [\n            {% for member in members[:-1] %}\n                {\n                    \"name\": \"{{ member }}\"\n                },\n            {% endfor %}\n                {\n                    \"name\": \"{{ members[-1] }}\"\n                }\n            ]\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"addrgrp\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"member\": [\n            {% for member in members[:-1] %}\n                {\n                    \"name\": \"{{ member }}\"\n                },\n            {% endfor %}\n                {\n                    \"name\": \"{{ members[-1] }}\"\n                }\n            ]\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set firewall address group"
+            }
+        },
+        "/api/v2/cmdb/firewall/ippool": {
+            "post": {
+                "operationId": "Add_firewall_IP_Pool",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"ippool\",\n        \"json\": {\n            \"startip\": \"{{ startip }}\",\n            {% if endip is defined %}\n                \"endip\": \"{{ endip }}\",\n            {% else %}\n                \"endip\": \"{{ startip }}\",\n            {% endif %}\n            {% if type is defined %}\n                \"type\": \"{{ type }}\",\n            {% else %}\n                \"type\": \"one-to-one\",\n            {% endif %}\n            {% if comments is defined %}\n                \"comments\": \"{{ comments }}\",\n            {% endif %}\n            {% if name is defined %}\n                \"name\": \"{{ name }}\"\n            {% else %}\n                \"name\": \"{{ startip }}\"\n            {% endif %}\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"ippool\",\n        \"json\": {\n            \"startip\": \"{{ startip }}\",\n            {% if endip is defined %}\n                \"endip\": \"{{ endip }}\",\n            {% else %}\n                \"endip\": \"{{ startip }}\",\n            {% endif %}\n            {% if type is defined %}\n                \"type\": \"{{ type }}\",\n            {% else %}\n                \"type\": \"one-to-one\",\n            {% endif %}\n            {% if comments is defined %}\n                \"comments\": \"{{ comments }}\",\n            {% endif %}\n            {% if name is defined %}\n                \"name\": \"{{ name }}\"\n            {% else %}\n                \"name\": \"{{ startip }}\"\n            {% endif %}\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall IP Pool"
+            }
+        },
+        "/api/v2/cmdb/firewall/ippool/{name}": {
+            "delete": {
+                "operationId": "Delete_firewall_IP_Pool",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall IP Pool"
+            },
+            "get": {
+                "operationId": "Get_firewall_IP_Pool",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall IP Pool"
+            }
+        },
+        "/api/v2/cmdb/firewall/policy": {
+            "post": {
+                "operationId": "Add_firewall_policy",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"srcintf\": [\n                {\n                    {% if srcintf is defined %}\n                        \"name\": \"{{ srcintf }}\"\n                    {% else %}\n                        \"name\": \"any\"\n                    {% endif %}\n                }\n            ],\n            \"dstintf\": [\n                {\n                    {% if dstintf is defined %}\n                        \"name\": \"{{ dstintf }}\"\n                    {% else %}\n                        \"name\": \"any\"\n                    {% endif %}\n                }\n            ],\n            \"srcaddr\":  [\n                {\n                    {% if srcaddr is defined %}\n                        \"name\": \"{{ srcaddr }}\"\n                    {% else %}\n                        \"name\": \"all\"\n                    {% endif %}\n                }\n            ],\n            \"dstaddr\":  [\n                {\n                    {% if dstaddr is defined %}\n                        \"name\": \"{{ dstaddr }}\"\n                    {% else %}\n                        \"name\": \"all\"\n                    {% endif %}\n                }\n            ],\n            {% if action is defined %}\n                \"action\": \"{{ action }}\",\n            {% else %}\n                \"action\": \"accept\",\n            {% endif %}\n            \"schedule\": \"always\",\n            {% if nat is defined %}\n            \"nat\": \"{{ nat }}\",\n            {% endif %}\n            {% if poolname is defined %}\n                {% if nat is not defined %}\n                    \"nat\": \"enable\",\n                {% endif %}\n                \"ippool\": \"enable\",\n                \"poolname\":[{\n                    \"name\": \"{{ poolname }}\"\n                }],\n            {% endif %}\n            {% if match_vip is defined %}\n                \"match-vip\": \"{{ match_vip }}\",\n            {% else %}\n                \"match-vip\": \"disable\",\n            {% endif %}\n            {% if status is defined %}\n                \"status\": \"{{ status }}\",\n            {% else %}\n                \"status\": \"enable\",\n            {% endif %}\n            \"service\":  [{\n                {% if service is defined %}\n                    \"name\": \"{{ service }}\"\n                {% else %}\n                    \"name\": \"ALL\"\n                {% endif %}\n            }],\n            {% set profiles = {\n                'av-profile': av_profile,\n                'webfilter-profile': webfilter_profile,\n                'ips-sensor': ips_sensor,\n                'application-list': application_list,\n                'ssl-ssh-profile': ssl_ssh_profile\n            } %}\n            {% set _utm_enable = true %}\n            {% for k, v in profiles.iteritems() if v is defined and v %}\n               {% if _utm_enable %}\n                   {%set _utm_enable = false %}\n                   \"utm-status\": \"enable\",\n                   \"profile-protocol-options\":\"default\",\n               {% endif %}\n               \"{{ k }}\": \"{{ v }}\",\n            {% else %}\n               \"utm-status\": \"disable\",\n               \"profile-protocol-options\": \"\",\n            {% endfor %}\n            {% if comments is defined %}\n                \"comments\": \"{{ comments }}\"\n            {% else %}\n                \"comments\": \"\"\n            {% endif %}\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"srcintf\": [\n                {\n                    {% if srcintf is defined %}\n                        \"name\": \"{{ srcintf }}\"\n                    {% else %}\n                        \"name\": \"any\"\n                    {% endif %}\n                }\n            ],\n            \"dstintf\": [\n                {\n                    {% if dstintf is defined %}\n                        \"name\": \"{{ dstintf }}\"\n                    {% else %}\n                        \"name\": \"any\"\n                    {% endif %}\n                }\n            ],\n            \"srcaddr\":  [\n                {\n                    {% if srcaddr is defined %}\n                        \"name\": \"{{ srcaddr }}\"\n                    {% else %}\n                        \"name\": \"all\"\n                    {% endif %}\n                }\n            ],\n            \"dstaddr\":  [\n                {\n                    {% if dstaddr is defined %}\n                        \"name\": \"{{ dstaddr }}\"\n                    {% else %}\n                        \"name\": \"all\"\n                    {% endif %}\n                }\n            ],\n            {% if action is defined %}\n                \"action\": \"{{ action }}\",\n            {% else %}\n                \"action\": \"accept\",\n            {% endif %}\n            \"schedule\": \"always\",\n            {% if nat is defined %}\n            \"nat\": \"{{ nat }}\",\n            {% endif %}\n            {% if poolname is defined %}\n                {% if nat is not defined %}\n                    \"nat\": \"enable\",\n                {% endif %}\n                \"ippool\": \"enable\",\n                \"poolname\":[{\n                    \"name\": \"{{ poolname }}\"\n                }],\n            {% endif %}\n            {% if match_vip is defined %}\n                \"match-vip\": \"{{ match_vip }}\",\n            {% else %}\n                \"match-vip\": \"disable\",\n            {% endif %}\n            {% if status is defined %}\n                \"status\": \"{{ status }}\",\n            {% else %}\n                \"status\": \"enable\",\n            {% endif %}\n            \"service\":  [{\n                {% if service is defined %}\n                    \"name\": \"{{ service }}\"\n                {% else %}\n                    \"name\": \"ALL\"\n                {% endif %}\n            }],\n            {% set profiles = {\n                'av-profile': av_profile,\n                'webfilter-profile': webfilter_profile,\n                'ips-sensor': ips_sensor,\n                'application-list': application_list,\n                'ssl-ssh-profile': ssl_ssh_profile\n            } %}\n            {% set _utm_enable = true %}\n            {% for k, v in profiles.iteritems() if v is defined and v %}\n               {% if _utm_enable %}\n                   {%set _utm_enable = false %}\n                   \"utm-status\": \"enable\",\n                   \"profile-protocol-options\":\"default\",\n               {% endif %}\n               \"{{ k }}\": \"{{ v }}\",\n            {% else %}\n               \"utm-status\": \"disable\",\n               \"profile-protocol-options\": \"\",\n            {% endfor %}\n            {% if comments is defined %}\n                \"comments\": \"{{ comments }}\"\n            {% else %}\n                \"comments\": \"\"\n            {% endif %}\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall policy"
+            }
+        },
+        "/api/v2/cmdb/firewall/policy/{id}": {
+            "delete": {
+                "operationId": "Delete_firewall_policy",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall policy"
+            },
+            "get": {
+                "operationId": "Get_firewall_policy",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall policy"
+            },
+            "put": {
+                "operationId": "Set_firewall_policy",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n\t\"srcaddr\": [{\n\t\t\"name\": \"103.109.101.105\"\n\t}]\n}",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n\t\"srcaddr\": [{\n\t\t\"name\": \"103.109.101.105\"\n\t}]\n}"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set firewall policy",
+                "x-label": "Block IP"
+            }
+        },
+        "/api/v2/cmdb/firewall/policy/{id}_shuffle_replace_0": {
+            "put": {
+                "operationId": "Move_firewall_policy",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        {% if before is defined %}\n            \"before\": \"{{ before }}\",\n        {% else %}\n            \"after\": \"{{ after }}\",\n        {% endif %}\n        \"action\": \"move\"\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        {% if before is defined %}\n            \"before\": \"{{ before }}\",\n        {% else %}\n            \"after\": \"{{ after }}\",\n        {% endif %}\n        \"action\": \"move\"\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Move firewall policy"
+            }
+        },
+        "/api/v2/cmdb/firewall/vip": {
+            "post": {
+                "operationId": "Add_firewall_VIP",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"vip\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"extip\": \"{{ extip }}\",\n            \"extintf\": \"{{ extintf }}\",\n            \"mappedip\": [{\n                    \"range\": \"{{ mappedip }}\"\n            }]\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"name\": \"vip\",\n        \"json\": {\n            \"name\": \"{{ name }}\",\n            \"extip\": \"{{ extip }}\",\n            \"extintf\": \"{{ extintf }}\",\n            \"mappedip\": [{\n                    \"range\": \"{{ mappedip }}\"\n            }]\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add firewall VIP"
+            }
+        },
+        "/api/v2/cmdb/firewall/vip/{id}": {
+            "delete": {
+                "operationId": "Delete_firewall_VIP",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete firewall VIP"
+            },
+            "get": {
+                "operationId": "Get_firewall_VIP",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get firewall VIP"
+            }
+        },
+        "/api/v2/cmdb/router/static": {
+            "post": {
+                "operationId": "Add_router_static",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"dst\": \"{{ dst }}\",\n            \"device\": \"{{ device }}\",\n            \"gateway\": \"{{gateway }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"dst\": \"{{ dst }}\",\n            \"device\": \"{{ device }}\",\n            \"gateway\": \"{{gateway }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add router static"
+            }
+        },
+        "/api/v2/cmdb/router/static/{id}": {
+            "delete": {
+                "operationId": "Delete_router_static",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete router static"
+            },
+            "get": {
+                "operationId": "Get_router_static",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get router static"
+            },
+            "put": {
+                "operationId": "Set_router_static",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"dst\": \"{{ dst }}\",\n            \"device\": \"{{ device }}\",\n            \"gateway\": \"{{gateway }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n            \"vdom\": \"{{ vdom }}\",\n        {% else %}\n            \"vdom\": \"root\",\n        {% endif %}\n        \"json\": {\n            \"dst\": \"{{ dst }}\",\n            \"device\": \"{{ device }}\",\n            \"gateway\": \"{{gateway }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set router static"
+            }
+        },
+        "/api/v2/cmdb/system.dhcp/server": {
+            "post": {
+                "operationId": "Add_DHCP_Server",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"server\",\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"status\":\"enable\",\n            {% if dns_nameservers is defined and dns_nameservers %}\n            \"dns-service\":\"specify\",\n            {% for dns in dns_nameservers[:3] %}\n            \"dns-server{{ loop.index }}\":\"{{ dns }}\",\n            {% endfor %}\n            {% else %}\n            \"dns-service\":\"default\",\n            {% endif %}\n            {% if gateway != None %}\n            \"default-gateway\":\"{{ gateway }}\",\n            {% endif %}\n            \"netmask\":\"{{ netmask }}\",\n            \"interface\":\"{{ interface }}\",\n            \"ip-range\":[\n                {\n                    \"start-ip\":\"{{ start_ip }}\",\n                    \"end-ip\":\"{{ end_ip }}\"\n                }\n            ]\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"server\",\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"status\":\"enable\",\n            {% if dns_nameservers is defined and dns_nameservers %}\n            \"dns-service\":\"specify\",\n            {% for dns in dns_nameservers[:3] %}\n            \"dns-server{{ loop.index }}\":\"{{ dns }}\",\n            {% endfor %}\n            {% else %}\n            \"dns-service\":\"default\",\n            {% endif %}\n            {% if gateway != None %}\n            \"default-gateway\":\"{{ gateway }}\",\n            {% endif %}\n            \"netmask\":\"{{ netmask }}\",\n            \"interface\":\"{{ interface }}\",\n            \"ip-range\":[\n                {\n                    \"start-ip\":\"{{ start_ip }}\",\n                    \"end-ip\":\"{{ end_ip }}\"\n                }\n            ]\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add DHCP Server"
+            }
+        },
+        "/api/v2/cmdb/system.dhcp/server/{id}": {
+            "delete": {
+                "operationId": "Delete_DHCP_Server",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete DHCP Server"
+            },
+            "get": {
+                "operationId": "Get_DHCP_server",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get DHCP server"
+            },
+            "put": {
+                "operationId": "Set_DHCP_server",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"server\",\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"status\":\"enable\",\n            {% if dns_nameservers is defined and dns_nameservers %}\n            \"dns-service\":\"specify\",\n            {% for dns in dns_nameservers[:3] %}\n            \"dns-server{{ loop.index }}\":\"{{ dns }}\",\n            {% endfor %}\n            {% else %}\n            \"dns-service\":\"default\",\n            {% endif %}\n            {% if gateway != None %}\n            \"default-gateway\":\"{{ gateway }}\",\n            {% endif %}\n            \"netmask\":\"{{ netmask }}\",\n            \"interface\":\"{{ interface }}\",\n            \"ip-range\":[\n                {\n                    \"start-ip\":\"{{ start_ip }}\",\n                    \"end-ip\":\"{{ end_ip }}\"\n                }\n            ]\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"server\",\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"status\":\"enable\",\n            {% if dns_nameservers is defined and dns_nameservers %}\n            \"dns-service\":\"specify\",\n            {% for dns in dns_nameservers[:3] %}\n            \"dns-server{{ loop.index }}\":\"{{ dns }}\",\n            {% endfor %}\n            {% else %}\n            \"dns-service\":\"default\",\n            {% endif %}\n            {% if gateway != None %}\n            \"default-gateway\":\"{{ gateway }}\",\n            {% endif %}\n            \"netmask\":\"{{ netmask }}\",\n            \"interface\":\"{{ interface }}\",\n            \"ip-range\":[\n                {\n                    \"start-ip\":\"{{ start_ip }}\",\n                    \"end-ip\":\"{{ end_ip }}\"\n                }\n            ]\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set DHCP server"
+            }
+        },
+        "/api/v2/cmdb/system.dhcp/server/{id}/reserved_address": {
+            "put": {
+                "operationId": "Set_DHCP_Server_RSV_Address",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"reserved-address\": {{ reserved_address }}\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        {% if vdom is defined %}\n        \"vdom\": \"{{ vdom }}\",\n        {% endif %}\n        \"json\": {\n            \"reserved-address\": {{ reserved_address }}\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set DHCP Server RSV Address"
+            }
+        },
+        "/api/v2/cmdb/system/interface": {
+            "post": {
+                "operationId": "Add_VLAN_interface",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"interface\",\n        \"json\": {\n            {% if name is defined %}\n                \"name\": \"{{ name }}\",\n            {% else %}\n                \"name\": \"os_vid_{{ vlanid }}\",\n            {% endif %}\n            {% if vlanid is defined %}\n                \"vlanid\": \"{{ vlanid }}\",\n            {% endif %}\n            \"interface\": \"{{ interface }}\",\n            \"vdom\": \"{{ vdom }}\",\n            \"type\": \"vlan\",\n            {% if ip is defined %}\n                \"ip\": \"{{ ip }}\",\n                \"mode\": \"static\",\n                \"allowaccess\": \"ping\",\n            {% endif %}\n            \"secondary-IP\":\"enable\",\n            {% if alias is defined %}\n                \"alias\": \"{{ alias  }}\",\n            {% endif %}\n            \"ipv6\": {\n                \"ip6-extra-addr\": []\n            }\n        }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"interface\",\n        \"json\": {\n            {% if name is defined %}\n                \"name\": \"{{ name }}\",\n            {% else %}\n                \"name\": \"os_vid_{{ vlanid }}\",\n            {% endif %}\n            {% if vlanid is defined %}\n                \"vlanid\": \"{{ vlanid }}\",\n            {% endif %}\n            \"interface\": \"{{ interface }}\",\n            \"vdom\": \"{{ vdom }}\",\n            \"type\": \"vlan\",\n            {% if ip is defined %}\n                \"ip\": \"{{ ip }}\",\n                \"mode\": \"static\",\n                \"allowaccess\": \"ping\",\n            {% endif %}\n            \"secondary-IP\":\"enable\",\n            {% if alias is defined %}\n                \"alias\": \"{{ alias  }}\",\n            {% endif %}\n            \"ipv6\": {\n                \"ip6-extra-addr\": []\n            }\n        }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add VLAN interface"
+            }
+        },
+        "/api/v2/cmdb/system/interface/{name}": {
+            "delete": {
+                "operationId": "Delete_VLAN_interface",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete VLAN interface"
+            },
+            "get": {
+                "operationId": "Get_VLAN_interface",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get VLAN interface"
+            },
+            "put": {
+                "operationId": "Set_VLAN_interface",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"interface\",\n        \"json\": {\n            {% if name is defined %}\n                \"name\": \"{{ name }}\",\n            {% else %}\n                \"name\": \"os_vid_{{ vlanid }}\",\n            {% endif %}\n            {% if vlanid is defined %}\n                \"vlanid\": \"{{ vlanid }}\",\n            {% endif %}\n            \"interface\": \"{{ interface }}\",\n            \"vdom\": \"{{ vdom }}\",\n            \"type\": \"vlan\",\n            {% if ip is defined %}\n                \"ip\": \"{{ ip }}\",\n                \"mode\": \"static\",\n                \"allowaccess\": \"ping\",\n            {% endif %}\n            \"secondary-IP\":\"enable\",\n            {% if alias is defined %}\n                \"alias\": \"{{ alias  }}\",\n            {% endif %}\n            \"ipv6\": {\n                \"ip6-extra-addr\": []\n            }\n        }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"interface\",\n        \"json\": {\n            {% if name is defined %}\n                \"name\": \"{{ name }}\",\n            {% else %}\n                \"name\": \"os_vid_{{ vlanid }}\",\n            {% endif %}\n            {% if vlanid is defined %}\n                \"vlanid\": \"{{ vlanid }}\",\n            {% endif %}\n            \"interface\": \"{{ interface }}\",\n            \"vdom\": \"{{ vdom }}\",\n            \"type\": \"vlan\",\n            {% if ip is defined %}\n                \"ip\": \"{{ ip }}\",\n                \"mode\": \"static\",\n                \"allowaccess\": \"ping\",\n            {% endif %}\n            \"secondary-IP\":\"enable\",\n            {% if alias is defined %}\n                \"alias\": \"{{ alias  }}\",\n            {% endif %}\n            \"ipv6\": {\n                \"ip6-extra-addr\": []\n            }\n        }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Set VLAN interface"
+            }
+        },
+        "/api/v2/cmdb/system/interface_shuffle_replace_0": {
+            "post": {
+                "operationId": "Add_VDOM_link_interface",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add VDOM link interface"
+            }
+        },
+        "/api/v2/cmdb/system/vdom/": {
+            "post": {
+                "operationId": "Add_VDOM",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"vdom\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"vdom\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add VDOM"
+            }
+        },
+        "/api/v2/cmdb/system/vdom/{id}": {
+            "get": {
+                "operationId": "Get_VDOM",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Get VDOM"
+            }
+        },
+        "/api/v2/cmdb/system/vdom/{name}": {
+            "delete": {
+                "operationId": "Delete_VDOM",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete VDOM"
+            }
+        },
+        "/api/v2/cmdb/system/vdom_link/{name}": {
+            "delete": {
+                "operationId": "Delete_VDOM_link",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {},
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Delete VDOM link"
+            },
+            "post": {
+                "operationId": "Add_VDOM_link",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add VDOM link"
+            }
+        },
+        "/api/v2/cmdb/system/vdom_link/{name}_shuffle_replace_0": {
+            "post": {
+                "operationId": "Add_VDOM_link",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "in": "path",
+                        "name": "name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": "{\n        \"name\": \"vdom-link\",\n        \"json\": {\n            \"name\":\"{{ name }}\"\n        }\n    }"
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Add VDOM link"
+            }
+        },
+        "/logincheck": {
+            "post": {
+                "operationId": "Login",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": ""
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "{\n        \"username\": \"{{ username }}\",\n        \"secretkey\": \"{{ secretkey }}\"\n}",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Login"
+            }
+        },
+        "/logout": {
+            "post": {
+                "operationId": "Logout",
+                "parameters": [
+                    {
+                        "description": "Generated by shuffler.io OpenAPI",
+                        "example": "",
+                        "in": "body",
+                        "multiline": true,
+                        "name": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Header generated by shuffler.io OpenAPI",
+                        "example": "application/json",
+                        "in": "header",
+                        "multiline": false,
+                        "name": "Content-Type",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "example": {
+                            "example": ""
+                        }
+                    },
+                    "description": "Generated by Shuffler.io"
+                },
+                "responses": {
+                    "default": {
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "example": "{\n        \"username\": \"{{ username }}\",\n        \"secretkey\": \"{{ secretkey }}\"\n}",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": "default"
+                    }
+                },
+                "summary": "Logout"
+            }
+        }
+    },
+    "schemes": [
+        ""
+    ],
+    "servers": [
+        {
+            "url": ""
+        }
+    ],
+    "tags": [
+        {
+            "name": "firewall"
+        },
+        {
+            "name": "networking"
+        }
+    ]
+}
